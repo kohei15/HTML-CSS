@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #777;
+}
+
+.clearfix::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+main {
+	width: 960px;
+	margin: 50px auto;
+}
+
+.content-box {
+	width: 300px;
+	float: left;
+	position: relative;
+	border: solid 1px #ddd;
+	padding: 5px;
+}
+.content-box:nth-child(2) {
+	margin: 0 20px;
+}
+.content-box img {
+	width: 280px;
+	display: block;
+    margin: 0 auto;
+}
+.content-title {
+	font-size: 18px;
+	padding: 5px 0;
+}
+.icon {
+	color: white;
+	background-color: orange;
+	padding: 5px 3px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*レスポンシブCSS*/
+/* タブレット縦置きサイズ(768px)程度の画面の大きさ以下に適用される設定です */
+@media screen and (max-width:768px) {
+  	main {
+		margin: 50px auto;
+		width: 90%;
+	}
+	.content-box {
+		float: none;
+		width: 90%;
+		margin: 20px auto;
+	}
+}
